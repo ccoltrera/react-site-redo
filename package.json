@@ -1,0 +1,24 @@
+{
+  "name": "reactified",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify -o built/bundle.js -v -d js/app.jsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/app.jsx -o built/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1",
+    "watchify": "^3.3.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
